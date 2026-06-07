@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "987654321098",
-    "project_id": "study-group-finder-dummy",
-    "storage_bucket": "study-group-finder-dummy.appspot.com"
+    "project_number": "452398903462",
+    "project_id": "studygroupfinder-b1846",
+    "storage_bucket": "studygroupfinder-b1846.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:987654321098:android:1234567890abcdef123456",
+        "mobilesdk_app_id": "1:452398903462:android:be965b2bacdf41d7d48467",
         "android_client_info": {
           "package_name": "com.studygroupfinder.app"
         }
@@ -15,18 +15,18 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDummyKeyPlaceholderForCompilation"
+          "current_key": "AIzaSyBYyWFbJ2WDRjzLF8EaGPjQl4Fcr_xkMaQ"
         }
       ],
       "services": {
         "appinvite_service": {
-          "status": 1
+          "other_platform_oauth_client": []
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:987654321098:android:6543210987fedcba654321",
+        "mobilesdk_app_id": "1:452398903462:android:be965b2bacdf41d7d48467",
         "android_client_info": {
           "package_name": "com.studygroupfinder.app.debug"
         }
@@ -34,12 +34,12 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDummyKeyPlaceholderForCompilation"
+          "current_key": "AIzaSyBYyWFbJ2WDRjzLF8EaGPjQl4Fcr_xkMaQ"
         }
       ],
       "services": {
         "appinvite_service": {
-          "status": 1
+          "other_platform_oauth_client": []
         }
       }
     }

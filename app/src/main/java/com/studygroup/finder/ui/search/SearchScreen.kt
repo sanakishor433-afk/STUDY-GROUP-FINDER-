@@ -1,6 +1,5 @@
 package com.studygroup.finder.ui.search
 
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -297,4 +296,5 @@ fun SearchScreen(
         }
     }
 }
+
 
