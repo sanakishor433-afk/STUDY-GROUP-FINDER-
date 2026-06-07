@@ -18,12 +18,16 @@ import com.studygroup.finder.ui.auth.AuthViewModel
 import com.studygroup.finder.ui.auth.LoginScreen
 import com.studygroup.finder.ui.auth.RegisterScreen
 import com.studygroup.finder.ui.auth.SplashScreen
+import com.studygroup.finder.ui.chat.ChatScreen
+import com.studygroup.finder.ui.chat.ChatViewModel
 import com.studygroup.finder.ui.home.HomeScreen
 import com.studygroup.finder.ui.home.HomeViewModel
 import com.studygroup.finder.ui.groups.GroupViewModel
 import com.studygroup.finder.ui.groups.GroupListScreen
 import com.studygroup.finder.ui.groups.CreateGroupScreen
 import com.studygroup.finder.ui.groups.GroupDetailScreen
+import com.studygroup.finder.ui.search.SearchScreen
+import com.studygroup.finder.ui.search.SearchViewModel
 
 /**
  * Top-level navigation graph for the Study Group Finder app.
@@ -202,7 +206,17 @@ fun AppNavGraph(
 
         // ── Search ──────────────────────────────────
         composable(Screen.Search.route) {
-            PlaceholderScreen("Search")
+            val searchViewModel: SearchViewModel = hiltViewModel()
+
+            SearchScreen(
+                viewModel = searchViewModel,
+                onNavigateBack = {
+                    navController.popBackStack()
+                },
+                onNavigateToGroupDetail = { groupId ->
+                    navController.navigate(Screen.GroupDetail.createRoute(groupId))
+                }
+            )
         }
 
         // ── Chat ────────────────────────────────────
@@ -215,7 +229,15 @@ fun AppNavGraph(
             )
         ) { backStackEntry ->
             val groupId = backStackEntry.arguments?.getString(Screen.Chat.ARG_GROUP_ID).orEmpty()
-            PlaceholderScreen("Chat\ngroupId = $groupId")
+            val chatViewModel: ChatViewModel = hiltViewModel()
+
+            ChatScreen(
+                groupId = groupId,
+                viewModel = chatViewModel,
+                onNavigateBack = {
+                    navController.popBackStack()
+                }
+            )
         }
 
         // ── Sessions ────────────────────────────────
